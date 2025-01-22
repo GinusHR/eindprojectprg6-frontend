@@ -3,6 +3,7 @@ import Layout from "./components/Layout.jsx";
 import Home from "./pages/Home.jsx";
 import Create from "./pages/Create.jsx";
 import Transformers from "./pages/Transformer.jsx";
+import Detail from "./pages/Detail.jsx";
 
 const router = createBrowserRouter([
     {
@@ -17,7 +18,11 @@ const router = createBrowserRouter([
                 element: <Create/>
             },
             {
-                path: '/transformers/:id',
+                path: '/detail/:id',
+                element: <Detail/>
+            },
+            {
+                path: '/edit/:id',
                 element: <Transformers/>
             },
 
