@@ -61,8 +61,22 @@ article {
   background-color: #9e9e9e;
   border: solid 3px #a100ff;
 }
+
+article,h2 {
+  color: #7409b3;
+}
+
 article:hover {
   border-color: #7409b3;
+}
+
+.detailLink {
+  text-decoration-line: underline;
+  color: #7409b3;
+}
+
+.detailLink:hover {
+  color: #c60101;
 }
 
 @media (prefers-color-scheme: light) {
@@ -85,7 +99,17 @@ article:hover {
   article {
     border-color: #ff0000;
   }
+  article,h2 {
+    color: #c60101;
+  }
   article:hover {
     border-color: #c60101;
+  }
+  .detailLink {
+    color: #c60101;
+  }
+
+  .detailLink:hover {
+    color: #7409b3;
   }
 }
