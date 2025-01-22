@@ -4,15 +4,15 @@ function Layout() {
     return (
         <div>
             <header>
-                <nav className="absolute flex justify-center gap-3.5  top-12 left-[20%]">
+                <nav className="flex justify-center gap-3.5">
                     <Link to={`/`}>Home</Link>
                     <Link to={`/create`}>Create New Product</Link>
                 </nav>
             </header>
-            <main className="flex justify-center">
+            <main className="flex align-top justify-center w-[100vw]">
                 <Outlet/>
             </main>
-            <footer className="absolute bottom-0">
+            <footer className="flex justify-center">
                 GEMAAKT DOOR GINUS VAN DER ZEE
             </footer>
         </div>

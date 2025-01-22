@@ -42,7 +42,7 @@ function FormComponent({onCreate}) {
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <div>
+                <div className="flex flex-col align-top">
                     <label htmlFor="name">Name:</label>
                     <input
                         type="text"
@@ -52,7 +52,7 @@ function FormComponent({onCreate}) {
                         onChange={handleInputChange}
                     />
                 </div>
-                <div>
+                <div className="flex flex-col">
                     <label htmlFor="faction">Faction:</label>
                     <input
                         type="text"
@@ -62,7 +62,7 @@ function FormComponent({onCreate}) {
                         onChange={handleInputChange}
                     />
                 </div>
-                <div>
+                <div className="flex flex-col">
                     <label htmlFor="description">Description:</label>
                     <input
                         type="text"

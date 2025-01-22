@@ -31,7 +31,7 @@ function Create() {
     }
     return (
         <>
-            <div className="flex flex-col">
+            <div className="flex flex-col justify-center w-3/12">
                 <FormComponent onCreate={onCreate} />
             </div>
 
