@@ -7,12 +7,12 @@ function FormComponent({onCreate}) {
             faction: '',
             description: ''
         }
-
     );
 
     const handleInputChange = (event) => {
         const {name, value} = event.target;
-        setFormData({...formData,
+        setFormData({
+            ...formData,
             [name]: value,
         });
     };
@@ -42,7 +42,7 @@ function FormComponent({onCreate}) {
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <div className="flex flex-col align-top">
+                <div className="flex flex-col align-top justify-center">
                     <label htmlFor="name">Name:</label>
                     <input
                         type="text"

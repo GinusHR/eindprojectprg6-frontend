@@ -1,5 +1,6 @@
 import {useNavigate, useParams} from "react-router";
 import {useEffect, useState} from "react";
+import DeleteButton from "../components/DeleteButton.jsx";
 
 function Transformers() {
     const {id} = useParams()
@@ -10,7 +11,7 @@ function Transformers() {
     useEffect(() => {
         async function getTransformer() {
             try {
-                const response = await fetch('http://145.24.223.84:8690/transformers/'+ id, {
+                const response = await fetch('http://145.24.223.84:8690/transformers/' + id, {
                     method: 'GET',
                     headers: {
                         'Accept': 'application/json'
@@ -23,12 +24,14 @@ function Transformers() {
                 console.error('Fout bij het ophalen van de note:', error);
             }
         }
+
         getTransformer();
     }, [id]);
 
     const handleInputChange = (event) => {
         const {name, value} = event.target;
-        setTransformer({...transformer,
+        setTransformer({
+            ...transformer,
             [name]: value,
         });
     };
@@ -54,66 +57,53 @@ function Transformers() {
 
     }
 
-    const handleDeleteClick = async () => {
-        try {
-            const response = await fetch('http://145.24.223.84:8690/transformers/'+ id, {
-                method: 'DELETE',
-                headers: {
-                    'Accept': 'application/json'
-                }
-            });
-            navigate('/')
 
-        } catch (error) {
-            console.error('dit is de fout:', error)
-        }
-    }
-
-    if(!transformer) {
-        return(
+    if (!transformer) {
+        return (
             <h1>No note found</h1>
         );
     }
 
 
     return (
-        <div className="flex flex-col">
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="name">Name:</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={transformer.name}
-                        onChange={handleInputChange}
-                    />
-                </div>
-                <div>
-                    <label htmlFor="faction">Faction:</label>
-                    <input
-                        type="text"
-                        id="faction"
-                        name="faction"
-                        value={transformer.faction}
-                        onChange={handleInputChange}
-                    />
-                </div>
-                <div>
-                    <label htmlFor="description">Tekst:</label>
-                    <input
-                        type="text"
-                        id="description"
-                        name="description"
-                        value={transformer.description}
-                        onChange={handleInputChange}
-                    />
-                </div>
-                <button type="submit">Verzenden</button>
-            </form>
-
-            <button onClick={handleDeleteClick}> delete</button>
-        </div>
+        <>
+            <div className="flex flex-col justify-center w-3/12">
+                <form className="flex flex-col justify-center " onSubmit={handleSubmit}>
+                    <div className="flex flex-col">
+                        <label htmlFor="name">Name:</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            value={transformer.name}
+                            onChange={handleInputChange}
+                        />
+                    </div>
+                    <div className="flex flex-col">
+                        <label htmlFor="faction">Faction:</label>
+                        <input
+                            type="text"
+                            id="faction"
+                            name="faction"
+                            value={transformer.faction}
+                            onChange={handleInputChange}
+                        />
+                    </div>
+                    <div className="flex flex-col">
+                        <label htmlFor="description">Tekst:</label>
+                        <input
+                            type="text"
+                            id="description"
+                            name="description"
+                            value={transformer.description}
+                            onChange={handleInputChange}
+                        />
+                    </div>
+                    <button className="w-6/12" type="submit">Verzenden</button>
+                </form>
+                <DeleteButton id={transformer.id}/>
+            </div>
+        </>
 
 
     );

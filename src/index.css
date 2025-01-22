@@ -70,12 +70,12 @@ article:hover {
   border-color: #7409b3;
 }
 
-.detailLink {
+.textLink {
   text-decoration-line: underline;
   color: #7409b3;
 }
 
-.detailLink:hover {
+.textLink:hover {
   color: #c60101;
 }
 
@@ -105,11 +105,11 @@ article:hover {
   article:hover {
     border-color: #c60101;
   }
-  .detailLink {
+  .textLink {
     color: #c60101;
   }
 
-  .detailLink:hover {
+  .textLink:hover {
     color: #7409b3;
   }
 }
