@@ -20,7 +20,7 @@ function FormComponent({onCreate}) {
     async function handleSubmit(e) {
         e.preventDefault();
         try {
-            const response = await fetch('https://notes.basboot.nl/notes', {
+            const response = await fetch('http://145.24.223.84:8690/transformers', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
@@ -43,31 +43,31 @@ function FormComponent({onCreate}) {
         <>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="title">Name:</label>
+                    <label htmlFor="name">Name:</label>
                     <input
                         type="text"
-                        id="title"
-                        name="title"
+                        id="name"
+                        name="name"
                         value={formData.name}
                         onChange={handleInputChange}
                     />
                 </div>
                 <div>
-                    <label htmlFor="author">Faction:</label>
+                    <label htmlFor="faction">Faction:</label>
                     <input
                         type="text"
-                        id="author"
-                        name="author"
+                        id="faction"
+                        name="faction"
                         value={formData.faction}
                         onChange={handleInputChange}
                     />
                 </div>
                 <div>
-                    <label htmlFor="body">Description:</label>
+                    <label htmlFor="description">Description:</label>
                     <input
                         type="text"
-                        id="body"
-                        name="body"
+                        id="description"
+                        name="description"
                         value={formData.description}
                         onChange={handleInputChange}
                     />

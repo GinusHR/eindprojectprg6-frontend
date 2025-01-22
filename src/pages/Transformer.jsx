@@ -8,7 +8,7 @@ function Transformers() {
 
 
     useEffect(() => {
-        async function getNote() {
+        async function getTransformer() {
             try {
                 const response = await fetch('http://145.24.223.84:8690/transformers/'+ id, {
                     method: 'GET',
@@ -23,7 +23,7 @@ function Transformers() {
                 console.error('Fout bij het ophalen van de note:', error);
             }
         }
-        getNote();
+        getTransformer();
     }, [id]);
 
     const handleInputChange = (event) => {
@@ -56,7 +56,7 @@ function Transformers() {
 
     const handleDeleteClick = async () => {
         try {
-            const response = await fetch('https://notes.basboot.nl/notes/'+ id, {
+            const response = await fetch('http://145.24.223.84:8690/transformers/'+ id, {
                 method: 'DELETE',
                 headers: {
                     'Accept': 'application/json'
@@ -80,31 +80,31 @@ function Transformers() {
         <div className="flex flex-col">
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="title">Titel:</label>
+                    <label htmlFor="name">Name:</label>
                     <input
                         type="text"
-                        id="title"
-                        name="title"
+                        id="name"
+                        name="name"
                         value={transformer.name}
                         onChange={handleInputChange}
                     />
                 </div>
                 <div>
-                    <label htmlFor="author">Auteur:</label>
+                    <label htmlFor="faction">Faction:</label>
                     <input
                         type="text"
-                        id="author"
-                        name="author"
+                        id="faction"
+                        name="faction"
                         value={transformer.faction}
                         onChange={handleInputChange}
                     />
                 </div>
                 <div>
-                    <label htmlFor="body">Tekst:</label>
+                    <label htmlFor="description">Tekst:</label>
                     <input
                         type="text"
-                        id="body"
-                        name="body"
+                        id="description"
+                        name="description"
                         value={transformer.description}
                         onChange={handleInputChange}
                     />
