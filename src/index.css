@@ -123,7 +123,7 @@ span {
     }
 
     .logo {
-        content: url("/public/autobot-logo.png");
+        content: url("/autobot-logo.png");
         width: 5vw;
         height: 8vh;
     }
