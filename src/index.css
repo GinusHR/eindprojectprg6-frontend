@@ -33,6 +33,12 @@ body {
   min-height: 100vh;
 }
 
+header {
+  background-color: #171717;
+  align-items: center;
+  border-bottom: solid 3px #a100ff;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -79,6 +85,10 @@ article:hover {
   color: #c60101;
 }
 
+.linkDiv {
+  align-items: center;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -89,6 +99,10 @@ article:hover {
   }
   a:hover {
     color: #c60101;
+  }
+  header {
+    background-color: #686868;
+    border-bottom-color: #ff0000;
   }
   button {
     background-color: #dcdada;
