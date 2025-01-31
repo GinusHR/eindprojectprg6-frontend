@@ -17,7 +17,7 @@ function FavoriteButton({pickTransformer}) {
             });
             const data = await response.json();
             console.log("API response:", data);
-            setTransformer((prev) => ({ ...prev, favorite: updatedFavorite }));
+            setTransformer((prev) => ({...prev, favorite: updatedFavorite}));
         } catch (error) {
             console.error('Fout bij het updaten van favoriet status:', error);
 
@@ -26,7 +26,7 @@ function FavoriteButton({pickTransformer}) {
     }
     return (
         <>
-            <button onClick={setFavorite}>
+            <button onClick={setFavorite} className={transformer.favorite ? "favorite" : "not-favorite"}>
                 {transformer.favorite ? "Unfavorite" : "Favorite"}
             </button>
         </>

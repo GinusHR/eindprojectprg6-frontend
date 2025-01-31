@@ -70,33 +70,36 @@ function Transformers() {
             <div className="flex flex-col justify-center w-3/12">
                 <form className="flex flex-col justify-center " onSubmit={handleSubmit}>
                     <div className="flex flex-col">
-                        <label htmlFor="name">Name:</label>
+                        <label className="font-bold text-lg" htmlFor="name">Name:</label>
                         <input
                             type="text"
                             id="name"
                             name="name"
                             value={transformer.name}
                             onChange={handleInputChange}
+                            className="rounded p-2 text-lg"
                         />
                     </div>
                     <div className="flex flex-col">
-                        <label htmlFor="faction">Faction:</label>
+                        <label className="font-bold text-lg" htmlFor="faction">Faction:</label>
                         <input
                             type="text"
                             id="faction"
                             name="faction"
                             value={transformer.faction}
                             onChange={handleInputChange}
+                            className="rounded p-2 text-lg"
                         />
                     </div>
                     <div className="flex flex-col">
-                        <label htmlFor="description">Tekst:</label>
+                        <label className="font-bold text-lg" htmlFor="description">Description:</label>
                         <input
                             type="text"
                             id="description"
                             name="description"
                             value={transformer.description}
                             onChange={handleInputChange}
+                            className="rounded p-2 text-lg"
                         />
                     </div>
                     <button className="w-6/12" type="submit">Verzenden</button>

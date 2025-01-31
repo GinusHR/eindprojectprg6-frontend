@@ -62,7 +62,7 @@ function Home () {
                 >
                     Previous
                 </button>
-                <span className="text-lg font-semibold text-gray-700">
+                <span className="text-lg font-semibold">
                     Page {currentPage} of {totalPages}
                 </span>
                 <button

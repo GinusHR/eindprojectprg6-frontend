@@ -43,33 +43,36 @@ function FormComponent({onCreate}) {
         <>
             <form onSubmit={handleSubmit}>
                 <div className="flex flex-col align-top justify-center">
-                    <label htmlFor="name">Name:</label>
+                    <label className="font-bold text-lg" htmlFor="name">Name:</label>
                     <input
                         type="text"
                         id="name"
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
+                        className="rounded p-2 text-lg"
                     />
                 </div>
                 <div className="flex flex-col">
-                    <label htmlFor="faction">Faction:</label>
+                    <label className="font-bold text-lg" htmlFor="faction">Faction:</label>
                     <input
                         type="text"
                         id="faction"
                         name="faction"
                         value={formData.faction}
                         onChange={handleInputChange}
+                        className="rounded p-2 text-lg"
                     />
                 </div>
                 <div className="flex flex-col">
-                    <label htmlFor="description">Description:</label>
+                    <label className="font-bold text-lg" htmlFor="description">Description:</label>
                     <input
                         type="text"
                         id="description"
                         name="description"
                         value={formData.description}
                         onChange={handleInputChange}
+                        className="rounded p-2 text-lg"
                     />
                 </div>
                 <button type="submit">Verzenden</button>
