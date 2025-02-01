@@ -38,7 +38,7 @@ function Detail () {
                 <article key={transformer.id} className="w-1/3 m-2 rounded-lg p-3">
                     <h2 className="text-2xl">{transformer.name}</h2>
                     <h3 className="text-cyan-600 text-xl">{transformer.faction}</h3>
-                    <p className="text-black text-lg">{transformer.description}</p>
+                    <p className="text-black text-lg p-3 bg-gray-300 rounded-md mb-2">{transformer.description}</p>
                     <Link className="textLink" to={`/edit/${transformer.id}`}>Edit</Link>
                 </article>
         </div>

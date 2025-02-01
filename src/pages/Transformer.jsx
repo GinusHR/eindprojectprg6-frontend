@@ -80,7 +80,7 @@ function Transformers() {
                             className="rounded p-2 text-lg"
                         />
                     </div>
-                    <div className="flex flex-col">
+                    <div className="flex flex-col mt-3 mb-3">
                         <label className="font-bold text-lg" htmlFor="faction">Faction:</label>
                         <input
                             type="text"
@@ -102,7 +102,7 @@ function Transformers() {
                             className="rounded p-2 text-lg"
                         />
                     </div>
-                    <button className="w-6/12" type="submit">Submit</button>
+                    <button className="w-6/12 mt-3 mb-2" type="submit">Submit</button>
                 </form>
                 <DeleteButton id={transformer.id}/>
             </div>

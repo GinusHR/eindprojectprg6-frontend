@@ -53,7 +53,7 @@ function FormComponent({onCreate}) {
                         className="rounded p-2 text-lg"
                     />
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col mt-3 mb-3">
                     <label className="font-bold text-lg" htmlFor="faction">Faction:</label>
                     <input
                         type="text"
@@ -75,7 +75,7 @@ function FormComponent({onCreate}) {
                         className="rounded p-2 text-lg"
                     />
                 </div>
-                <button type="submit">Verzenden</button>
+                <button className="mt-3 w-6/12" type="submit">Verzenden</button>
             </form>
         </>
 
