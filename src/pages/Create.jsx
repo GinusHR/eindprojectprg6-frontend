@@ -8,7 +8,7 @@ function Create() {
     useEffect(() => {
         async function fetchTransformer() {
             try {
-                const response = await fetch('http://145.24.223.84:8690/transformers', {
+                const response = await fetch('http://145.24.223.84:8880/transformers', {
                     method: 'GET',
                     headers: {
                         'Accept': 'application/json'

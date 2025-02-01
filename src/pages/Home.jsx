@@ -13,7 +13,7 @@ function Home () {
         async function fetchTransformer() {
             try {
                 setIsLoading(true);
-                const response = await fetch(`http://145.24.223.84:8690/transformers?page=${currentPage}&limit=${ITEMS_PER_PAGE}`, {
+                const response = await fetch(`http://145.24.223.84:8880/transformers?page=${currentPage}&limit=${ITEMS_PER_PAGE}`, {
                     method: 'GET',
                     headers: {
                         'Accept': 'application/json'

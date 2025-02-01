@@ -2,14 +2,6 @@ import {Link} from "react-router";
 import FavoriteButton from "../FavoriteButton.jsx";
 
 function ObjectComponent({transformer}) {
-    const article = document.getElementsByClassName('art')
-    const checkFavorite = () => {
-        if (transformer.favorite) {
-            article.className.add('favorite');
-        }
-        console.log(article)
-    }
-    checkFavorite();
     return (
         <div className="flex flex-row justify-center flex-wrap  ml-[7vw] w-10/12 ">
             {transformer.map((transformer) => (

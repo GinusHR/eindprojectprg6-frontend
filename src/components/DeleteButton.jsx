@@ -4,7 +4,7 @@ function DeleteButton({id}) {
     const navigate = useNavigate();
     const handleDeleteClick = async () => {
         try {
-            const response = await fetch('http://145.24.223.84:8690/transformers/'+ id, {
+            const response = await fetch('http://145.24.223.84:8880/transformers/'+ id, {
                 method: 'DELETE',
                 headers: {
                     'Accept': 'application/json'
@@ -20,7 +20,7 @@ function DeleteButton({id}) {
     return(
       <>
       <button className="w-6/12" onClick={handleDeleteClick}>
-        Verwijder
+        Delete
       </button>
       </>
     );

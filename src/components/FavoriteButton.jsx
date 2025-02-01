@@ -7,7 +7,7 @@ function FavoriteButton({pickTransformer}) {
 
             const updatedFavorite = !transformer.favorite;
 
-            const response = await fetch('http://145.24.223.84:8690/transformers/' + pickTransformer.id, {
+            const response = await fetch('http://145.24.223.84:8880/transformers/' + pickTransformer.id, {
                 method: 'PATCH',
                 headers: {
                     'Accept': 'application/json',

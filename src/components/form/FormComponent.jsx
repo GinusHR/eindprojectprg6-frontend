@@ -20,7 +20,7 @@ function FormComponent({onCreate}) {
     async function handleSubmit(e) {
         e.preventDefault();
         try {
-            const response = await fetch('http://145.24.223.84:8690/transformers', {
+            const response = await fetch('http://145.24.223.84:8880/transformers', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',

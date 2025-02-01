@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import DeleteButton from "../components/DeleteButton.jsx";
 
 function Transformers() {
-    const {id} = useParams()
+    const {id} = useParams();
     const [transformer, setTransformer] = useState();
     const navigate = useNavigate();
 
@@ -11,7 +11,7 @@ function Transformers() {
     useEffect(() => {
         async function getTransformer() {
             try {
-                const response = await fetch('http://145.24.223.84:8690/transformers/' + id, {
+                const response = await fetch('http://145.24.223.84:8880/transformers/' + id, {
                     method: 'GET',
                     headers: {
                         'Accept': 'application/json'
@@ -39,7 +39,7 @@ function Transformers() {
     async function handleSubmit(e) {
         e.preventDefault();
         try {
-            const response = await fetch('http://145.24.223.84:8690/transformers/' + id, {
+            const response = await fetch('http://145.24.223.84:8880/transformers/' + id, {
                 method: 'PUT',
                 headers: {
                     'Accept': 'application/json',
@@ -102,7 +102,7 @@ function Transformers() {
                             className="rounded p-2 text-lg"
                         />
                     </div>
-                    <button className="w-6/12" type="submit">Verzenden</button>
+                    <button className="w-6/12" type="submit">Submit</button>
                 </form>
                 <DeleteButton id={transformer.id}/>
             </div>

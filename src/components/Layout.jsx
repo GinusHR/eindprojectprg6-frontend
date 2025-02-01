@@ -17,7 +17,7 @@ function Layout() {
                 <Outlet/>
             </main>
             <footer className="flex justify-center">
-                GEMAAKT DOOR GINUS VAN DER ZEE
+
             </footer>
         </div>
     );
